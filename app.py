@@ -9,7 +9,7 @@ def main() :
 if __name__ == '__main__' :
     main()
 
-Model = pickle.load(open(r'C:\Final Project Uber\modelEN.pkl','rb'))
+Model = pickle.load(open(r'https://github.com/Randi078-git/Modelrandi/blob/main/modelEN.pkl','rb'))
 Scaler = pickle.load(open(r'C:\Final Project Uber\scalerEN.pkl','rb'))
 
 #Sidebar
@@ -99,6 +99,7 @@ if predictmodel:
         st.markdown(f"## Your Fare Amount are $**{fare_prediction:.2f}**")
     except:
         st.write(f"Error please correct the input")
+
 
 
 
