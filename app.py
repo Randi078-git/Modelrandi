@@ -23,7 +23,7 @@ if passenger >1 :
 else :
     st.write(f"We have **{passenger}** Passenger")
 
-distance = st.sidebar.number_input('Distance (km)', min_value=0.1, max_value=500.0, value=4.0, step=0.1)
+distance = st.sidebar.number_input('Distance (km)', min_value=0.0, max_value=500.0, value=0.0, step=0.1)
 st.write(f"Radius Distance Total **{distance:.2f}** KM")
 
 Time = st.sidebar.time_input('Pickup Time',value = datetime.datetime.now(pytz.timezone('Asia/Jakarta')), step=60)
@@ -100,6 +100,7 @@ if predictmodel:
         st.markdown(f"## Your Fare Amount are $**{fare_prediction:.2f}**")
     except:
         st.write(f"Error please correct the input")
+
 
 
 
