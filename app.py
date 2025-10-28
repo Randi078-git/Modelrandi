@@ -87,8 +87,8 @@ dfonehot = pd.get_dummies(df_newdata)
 for kolom in one_hot_columns:
     if kolom not in dfonehot.columns:
             dfonehot[kolom] = 0
-#with st.expander("Expand Dataframe"):
- #   st.dataframe(dfonehot)
+with st.expander("Expand Dataframe"):
+    st.dataframe(dfonehot)
 predictmodel = st.sidebar.button('Calculate Fare')
 if predictmodel:
     try:
@@ -100,6 +100,7 @@ if predictmodel:
         st.markdown(f"## Your Fare Amount are $**{fare_prediction:.2f}**")
     except:
         st.write(f"Error please correct the input")
+
 
 
 
